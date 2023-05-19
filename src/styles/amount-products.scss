@@ -1,0 +1,38 @@
+@use "./variables.scss" as *;
+
+.amount-products {
+  display: flex;
+  margin: 20px 0;
+  font-size: 16px;
+  align-items: center;
+  justify-content: flex-end;
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: $black;
+    font-size: 16px;
+    cursor: pointer;
+
+    @media (max-width: 600px) {
+      font-size: 13px;
+    }
+  }
+
+  p {
+    margin-left: 5px;
+
+    @media (max-width: 600px) {
+      font-size: 13px;
+    }
+  }
+
+  .active {
+    color: $red;
+    font-weight: 700;
+  }
+
+  @media (max-width: 1000px) {
+    margin: 15px 0;
+  }
+}

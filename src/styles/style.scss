@@ -1,0 +1,40 @@
+@use "./variables.scss" as *;
+@use "./reset.scss";
+@use "./baner.scss";
+@use "./promotion-info.scss";
+@use "./amount-products.scss";
+@use "./products.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 14px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 400;
+  color: $black;
+  background-color: $white;
+
+  .container {
+    max-width: 1440px;
+    padding: 61px 82px;
+    margin: auto;
+
+    @media (max-width: 1440px) {
+      padding: 61px 60px;
+    }
+
+    @media (max-width: 1000px) {
+      padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+      padding: 15px;
+    }
+  }
+}
