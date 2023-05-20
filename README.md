@@ -14,9 +14,7 @@ It was created using HTML, Sass, JavaScript.
 
 ![Furniture Shop Image](/src/img/furniture-shop-img.png)
 
-|                                             |                                              |
-| ------------------------------------------- | -------------------------------------------- |
-| ![](/src/img/furniture-shop-img-mobile.png) | ![](/src/img/furniture-shop-img-mobile2.png) |
+<div style="display: flex; justify-content: space-between"> <img src="./src/img/furniture-shop-img-mobile.png" width="49%"> <img src="./src/img/furniture-shop-img-mobile2.png" width="49%"></div>
 
 ## Technologies
 
