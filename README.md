@@ -14,8 +14,6 @@ It was created using HTML, Sass, JavaScript.
 
 ![Furniture Shop Image](/src/img/furniture-shop-img.png)
 
-<div style="display: flex; justify-content: space-between"> <img src="./src/img/furniture-shop-img-mobile.png" width="49%"> <img src="./src/img/furniture-shop-img-mobile2.png" width="49%"></div>
-
 ## Technologies
 
 Project is created with:
@@ -33,3 +31,8 @@ To run this project, install it locally using npm:
 npm install
 npm run serve
 ```
+
+<div style="display: flex; justify-content: space-between"> 
+    <img src="./src/img/furniture-shop-img-mobile.png" width="49%"> 
+    <img src="./src/img/furniture-shop-img-mobile2.png" width="49%">
+</div>
