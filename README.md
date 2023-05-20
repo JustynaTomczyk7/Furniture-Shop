@@ -1,5 +1,7 @@
 # 🛏️ Furniture Shop
 
+## Demo: https://justynatomczyk7.github.io/Furniture-Shop
+
 ## Table of contents
 
 - [General info](#general-info)
