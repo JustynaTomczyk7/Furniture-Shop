@@ -12,80 +12,78 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-}
 
-.img-container {
-  padding: 21px 43px 0 32px;
-  max-height: 215px;
-
-  img {
-    width: 100%;
+  &__img-container {
+    padding: 21px 43px 0 32px;
+    max-height: 215px;
 
     @media (max-width: 1000px) {
-      width: 95%;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      padding: 10px 0 0 0;
+    }
+
+    img {
+      width: 100%;
+
+      @media (max-width: 1000px) {
+        width: 95%;
+      }
     }
   }
 
-  @media (max-width: 1000px) {
+  &__clock-container {
+    min-width: 333px;
+    height: 142px;
+    border: 3px solid #fff;
+    padding: 24px;
+    text-align: center;
+    margin-right: 42px;
+
+    @media (max-width: 1100px) {
+      height: 122px;
+      padding: 14px 24px;
+    }
+
+    @media (max-width: 1000px) {
+      border: none;
+      margin: 10px 0;
+      height: 142px;
+      padding: 24px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+  }
+}
+
+.clock-countdown {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  &__number {
+    width: 44px;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  &__unit {
+    display: inline-block;
+    font-size: 16px;
     text-align: center;
   }
 
-  @media (max-width: 600px) {
-    padding: 10px 0 0 0;
-  }
-}
-
-.clock-container {
-  min-width: 333px;
-  height: 142px;
-  border: 3px solid #fff;
-  padding: 24px;
-  text-align: center;
-  margin-right: 42px;
-
-  p {
-    font-size: 16px;
-    margin-bottom: 6px;
-  }
-
-  .clock-countdown {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-
-    .time {
-      div {
-        width: 44px;
-        font-size: 36px;
-        font-weight: 700;
-        text-align: center;
-        padding: 10px 0;
-      }
-
-      span {
-        display: inline-block;
-        font-size: 16px;
-        text-align: center;
-      }
-    }
-
-    .colon {
-      font-size: 36px;
-      font-weight: 700;
-      text-align: center;
-      padding: 10px 0;
-    }
-  }
-
-  @media (max-width: 1100px) {
-    height: 122px;
-    padding: 14px 24px;
-  }
-
-  @media (max-width: 1000px) {
-    border: none;
-    margin: 10px 0;
-    height: 142px;
-    padding: 24px;
+  &__colon {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px 0;
   }
 }

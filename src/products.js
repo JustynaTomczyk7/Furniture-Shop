@@ -3,7 +3,6 @@ import shoppingCartImg from "./img/shopping-cart.svg";
 const apiURL = "https://www.mamezi.pl/praca/front/products/data.json";
 
 const productsContainer = document.querySelector("#products");
-
 const amountButtons = {
   btn2: {
     element: document.querySelector("#btn-count2"),
@@ -20,24 +19,25 @@ const amountButtons = {
 };
 
 let activeAmountButton = amountButtons.btn4;
-activeAmountButton.element.classList.add("active");
-
-Object.entries(amountButtons).forEach(([key, val]) => {
-  val.element.addEventListener("click", () => {
-    activeAmountButton.element.classList.remove("active");
-    val.element.classList.add("active");
-    activeAmountButton = val;
-    displayProducts();
-  });
-});
-
 let products = [];
 
+start();
+
 async function start() {
+  activeAmountButton.element.classList.add("active");
+
+  Object.entries(amountButtons).forEach(([key, val]) => {
+    val.element.addEventListener("click", () => {
+      activeAmountButton.element.classList.remove("active");
+      val.element.classList.add("active");
+      activeAmountButton = val;
+      displayProducts();
+    });
+  });
+
   products = await getProducts();
   displayProducts();
 }
-start();
 
 async function getProducts() {
   const response = await fetch(apiURL);
@@ -67,8 +67,8 @@ async function displayProducts() {
   products.slice(0, activeAmountButton.count).forEach((product) => {
     const productTemplate = `
       <a class="product" href="${product.url}" target="_blank">
-        <div class="amount-discount">
-          <div class="cart">
+        <div class="product__amount-discount">
+          <div class="product__cart">
             <img
               src="${shoppingCartImg}"
               alt="Ikona
@@ -78,24 +78,28 @@ async function displayProducts() {
               product.availability.name
             )}</span></p>
           </div>
-          <div class="discount">
+          <div class="product__discount">
             <p>oszczędzasz: <span>${
               product.price.gross.base_float - product.price.gross.final_float
             } zł</span></p>
           </div>
         </div>
         <img
-          class="img-product"
+          class="product__img"
           src="${getProductPhoto(product.main_image)}"
           alt="Zdjęcie
             produktu"
         />
-        <div class="price">
-          <p class="new">${product.price.gross.final_float} zł</p>
-          <p class="previous">${product.price.gross.base_float} zł</p>
+        <div class="product__price">
+          <p class="product__price-new">${
+            product.price.gross.final_float
+          } zł</p>
+          <p class="product__price-previous">${
+            product.price.gross.base_float
+          } zł</p>
         </div>
-        <p class="name">${product.name}</p>
-        <p class="producer">${product.producer.name}</p>
+        <p class="product__name">${product.name}</p>
+        <p class="product__producer">${product.producer.name}</p>
       </a>
     `;
 

@@ -26,38 +26,6 @@
   text-decoration: none;
   color: inherit;
 
-  .img-product {
-    width: 100%;
-    margin: 20px 0;
-
-    @media (max-width: 600px) {
-      margin: 10px 0;
-    }
-  }
-
-  .price {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-
-    .new {
-      font-weight: 700;
-      font-size: 18px;
-      color: $red;
-      margin-right: 5px;
-    }
-
-    .previous {
-      text-decoration-line: line-through;
-    }
-  }
-
-  .producer {
-    font-size: 13px;
-    color: #adadad;
-    margin-top: 10px;
-  }
-
   @media (max-width: 1400px) {
     width: calc(100% / 3 - 10px);
   }
@@ -70,16 +38,20 @@
     width: calc(100% / 2 - 4px);
     padding: 8px;
   }
-}
 
-.amount-discount {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  font-size: 13px;
+  &__amount-discount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 13px;
 
-  .cart {
+    @media (max-width: 600px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__cart {
     display: flex;
     align-items: center;
 
@@ -92,15 +64,11 @@
     }
   }
 
-  .discount {
+  &__discount {
     border: 1px solid $red;
     padding: 10px;
     color: $red;
     height: 33px;
-
-    span {
-      font-weight: 700;
-    }
 
     @media (max-width: 600px) {
       padding: 10px 2px;
@@ -108,9 +76,40 @@
       text-align: center;
       margin-top: 10px;
     }
+
+    span {
+      font-weight: 700;
+    }
   }
 
-  @media (max-width: 600px) {
-    flex-wrap: wrap;
+  &__img {
+    width: 100%;
+    margin: 20px 0;
+
+    @media (max-width: 600px) {
+      margin: 10px 0;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  &__price-new {
+    font-weight: 700;
+    font-size: 18px;
+    color: $red;
+    margin-right: 5px;
+  }
+
+  &__price-previous {
+    text-decoration-line: line-through;
+  }
+
+  &__producer {
+    font-size: 13px;
+    color: #adadad;
+    margin-top: 10px;
   }
 }

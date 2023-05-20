@@ -7,6 +7,10 @@
   align-items: center;
   justify-content: flex-end;
 
+  @media (max-width: 1000px) {
+    margin: 15px 0;
+  }
+
   button {
     background-color: transparent;
     border: none;
@@ -30,9 +34,5 @@
   .active {
     color: $red;
     font-weight: 700;
-  }
-
-  @media (max-width: 1000px) {
-    margin: 15px 0;
   }
 }

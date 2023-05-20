@@ -14,6 +14,10 @@ It was created using HTML, Sass, JavaScript.
 
 ![Furniture Shop Image](/src/img/furniture-shop-img.png)
 
+|                                             |                                              |
+| ------------------------------------------- | -------------------------------------------- |
+| ![](/src/img/furniture-shop-img-mobile.png) | ![](/src/img/furniture-shop-img-mobile2.png) |
+
 ## Technologies
 
 Project is created with:
