@@ -1,15 +1,33 @@
-# 🚀 Welcome to your new awesome project!
+# 🛏️ Furniture Shop
 
-This project has been created using **webpack-cli**, you can now run
+## Table of contents
+
+- [General info](#general-info)
+- [Technologies](#technologies)
+- [Installation](#installation)
+
+## General info
+
+"Furniture Shop" was created based on graphics designed by Mamezi Studio.
+It is a responsive store design that includes a countdown timer for the end of the promotion.
+It was created using HTML, Sass, JavaScript.
+
+![Furniture Shop Image](/src/img/furniture-shop-img.png)
+
+## Technologies
+
+Project is created with:
+
+- JavaScript
+- Sass
+- HTML
+- Webpack
+
+## Installation
+
+To run this project, install it locally using npm:
 
 ```
-npm run build
+npm install
+npm run serve
 ```
-
-or
-
-```
-yarn build
-```
-
-to bundle your application
